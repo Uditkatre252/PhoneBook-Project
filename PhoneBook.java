@@ -4,20 +4,20 @@ import java.util.Scanner;
 
 public class PhoneBook {
 
-    // Using HashMap to store name and phone number
+   
     private Map<String, String> contacts;
 
     public PhoneBook() {
         contacts = new HashMap<>();
     }
 
-    // Add a new contact
+    
     public void addContact(String name, String phoneNumber) {
         contacts.put(name, phoneNumber);
         System.out.println("Contact added: " + name + " - " + phoneNumber);
     }
 
-    // Delete a contact by name
+    
     public void deleteContact(String name) {
         if (contacts.containsKey(name)) {
             contacts.remove(name);
@@ -27,7 +27,7 @@ public class PhoneBook {
         }
     }
 
-    // Update a contact's phone number by name
+    
     public void updateContact(String name, String newPhoneNumber) {
         if (contacts.containsKey(name)) {
             contacts.put(name, newPhoneNumber);
@@ -37,7 +37,7 @@ public class PhoneBook {
         }
     }
 
-    // Search for a contact by name
+    
     public void searchContact(String name) {
         if (contacts.containsKey(name)) {
             System.out.println("Contact found: " + name + " - " + contacts.get(name));
@@ -46,7 +46,7 @@ public class PhoneBook {
         }
     }
 
-    // Display all contacts
+    
     public void displayAllContacts() {
         if (contacts.isEmpty()) {
             System.out.println("Phone book is empty.");
@@ -58,7 +58,7 @@ public class PhoneBook {
         }
     }
 
-    // Count total contacts
+    
     public void countContacts() {
         System.out.println("Total contacts: " + contacts.size());
     }
